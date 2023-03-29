@@ -15,33 +15,104 @@
       <div class="container main-nav">
       <a href="./index.html" class="icon-link"><span>WEB</span>STUDIO</a>
       <nav class="items">
-        <ul class="site-nav list">
+        <ul class="site-nav list menu">
           <li class="item">
-            <a href="" class="link-current menu-link header-link current">Studio</a>
+            <a href="" class="link-current menu-link header-link current link">Studio</a>
           </li>
           <li class="item">
-            <a href="./portfolio.html" class="menu-link header-link">Portfolio</a>
+            <a href="./portfolio.html" class="menu-link header-link link">Portfolio</a>
           </li>
           <li class="item">
-            <a href="" class="menu-link header-link">Contacts</a>
+            <a href="" class="menu-link header-link link">Contacts</a>
           </li>
         </ul>
       </nav>
-      <address class="items-nav">
+      <button type="button" class="mobile-menu-open js-open-menu"  >
+        <svg class="mobile-menu-open-icon" width="32" height="22">
+          <use href="./images/icons.svg#icon-menu-hamburger"></use>
+        </svg>
+      </button>
+      <address class="items-nav menu">
         <ul class="auth-nav list">
           <li class="item">
-            <a href="email:info@devstudio.com" class="menu-link">info@devstudio.com</a>
+            <a href="email:info@devstudio.com" class="menu-link link">info@devstudio.com</a>
           </li>
           <li class="item">
-            <a href="tel:+11(000)1111111" class="menu-link">+11 (000) 111-11-11</a>
+            <a href="tel:+11(000)1111111" class="menu-link link">+11 (000) 111-11-11</a>
           </li>
         </ul>
       </address>
       </div> 
+
+
+      <div class="mobile-menu js-menu-container"  >
+        <div class="container mobile-menu__container" >
+
+        <button class="mobile-menu__close-btn js-close-menu"  >
+          <svg class="mobile-menu__close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-modal" ></use>
+          </svg>
+        </button>
+        
+        <ul class="mobile-menu__nav">
+          <li class="menu-item">
+            <a href="./index.html" class="link-current mobile-menu__link">Studio</a>
+          </li>
+          <li class="menu-item">
+            <a href="./portfolio.html" class="mobile-menu__link">Portfolio</a>
+          </li>
+          <li class="menu-item">
+            <a href="" class="mobile-menu__link">Contacts</a>
+          </li>
+        </ul>
+
+        <div class="mobile-menu__address">
+        <ul class="mobile-menu-list">
+          <li class="menu-item mobile__list ">
+            <a href="tel:+11(000)1111111" class="link-current mobile-menu__link ">+11 (000) 111-11-11</a>
+          </li>
+          <li class="mobile-link">
+            <a href="email:info@devstudio.com" class="mobile-menu__link">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu__social">
+          <li>
+            <a href="" class="mobile-menu__link-social">
+            <svg class="mobile-menu__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-menu__link-social">
+            <svg class="mobile-menu__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-menu__link-social">
+            <svg class="mobile-menu__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-menu__link-social">
+            <svg class="mobile-menu__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+        </div>
+      </div>
     </header>
 
 
-    <main>
+    <!-- <main>
       <section class="hero words">
         <div class="section-hero">
         <div class="container">
@@ -438,6 +509,7 @@
           class="subscribe-title-list-wrapper"
           placeholder="E-mail"
           aria-label="email"
+          required
           />
 
         <button type="submit" class="subscribe-btn">
@@ -534,7 +606,8 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script> -->
+    <script src="./js/mobile-menu.js"></script>
 
   </body>
 </html>

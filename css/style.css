@@ -23,49 +23,232 @@ ul {
     padding: 0;
     list-style: none;
 }
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
 h1,h2,h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
 .visually-hidden {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    top: -150%;
+    z-index: -100;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+    pointer-events: none;
+    cursor: none;
+    margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 0;
-    clip: (0 0 0 0);
+    border: none;
     outline: none;
+    white-space: nowrap;
+}
+
+
+/*.................MOBIL//TABLET///DESKTOP VERSION..........................*/
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+@media screen and (min-width:480px) {
+    .container {
+    width: 426px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+@media screen and (min-width:768px) {
+    .container {
+    width: 766px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .container {
+    width: 1158px;
+    }
+}
+
+
+
+
+/*...mobile..*/
+
+@media screen and (max-width: 768px) {
+    .menu {
+    display: none;
+}
+}
+.nav-list {
+    padding-top: 24px;
+    padding-bottom: 22px;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 40px;
+    
+}
+
+/*.............MOBILE MENU............*/
+
+.mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-menu__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 35px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    
+}
+.mobile-menu__nav {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   margin-bottom: 284px;
+
+}
+.menu-item {
+    
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    
+}
+.mobile-menu__link {
+    text-decoration: none;
+    color: var(--brand-color);
+}
+.link-current {
+    color: var(--color-hover);
+}
+.mobile__list {
+    margin-bottom: 40px;
+
+}
+.mobile-link {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 48px;
+}
+.mobile-link a {
+    color: var(--main-color-text);
+
+}
+.mobile-menu__address {
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+.mobile-menu__close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
+    background-color: var(--secondary-color-text);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
 }
 
 
 
-/* ....................logo.................... */
-.menu-link {
-    color: var(--brand-color);
+
+.mobile-menu__social {
+    display: flex;
+    gap: 56px;
+
+}
+.mobile-menu__link-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    cursor: pointer;
+
+}
+
+
+
+
+
+/*..............................HEADER...................*/
+/* ....................LOGO.................... */
+
+.link {
     text-decoration: none;
-    
+}
+/* .menu-link {
+    color: var(--brand-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .menu-link:hover, 
 .menu-link:focus {
     color: var(--color-hover);
     
-}
+} */
 
-.main-nav{
+/* .main-nav{
     
     display: flex;
     align-items: center;
-}
+} */
 .icon-link {
     color: var(--brand-color);
     font-family: Raleway, sans-serif;
@@ -86,8 +269,8 @@ span {
 
 
 
-/* ....................site-nav ....................*/
-.list {
+/* ....................SITE-NAV ....................*/
+/* .list {
     margin: 0;
     padding: 0;
 }
@@ -126,11 +309,11 @@ span {
 
 .site-nav .current {
     color: var(--color-hover);
-}
+} */
 
 
-/* ....................auth-nav.................... */
-.auth-nav a {
+/* ....................AUTH-NAV.................... */
+/* .auth-nav a {
     display: block;
     color: var(--main-color-text);
     font-style: normal;
@@ -148,11 +331,11 @@ span {
 }
 .auth-nav .item + .item {
     margin-left: 40px;
-}
+} */
 
 
 
-/* ..................hero.................... */
+/* ..................HERO.................... */
 
 .words {
     max-width: 1440px;
@@ -203,7 +386,7 @@ span {
 
 
 
-/* section */
+/*...................SECTION.................... */
 
 .section-title {
     margin-bottom: 8px;
@@ -221,9 +404,7 @@ span {
     height: 112px;
     margin-bottom: 8px;
 }
-/* .headline {
-    display: none;
-} */
+
 .section-text { 
     display: flex;
 }
@@ -375,7 +556,7 @@ img {
 
 
 
-/* footer */
+/*.......................FOOTER................... */
 
 .footer-content {
     padding: 100px 0;
@@ -436,9 +617,7 @@ img {
 .social-item {
     margin-left: 120px;
 }
-/* .social-item-list {
-    margin-left: 80px;
-} */
+
 
 .subscribe-content {
     margin-left: 80px;
@@ -497,6 +676,7 @@ img {
     border-radius: 4px;
     background-color: transparent;
     color: var(--white-color);
+    outline: none;
 }
 .subscribe-title-list-wrapper::placeholder {
     color: var(--white-color);
@@ -521,7 +701,8 @@ img {
 
 
 
-/*........Modal window........*/
+
+/*.....................MODAL WINDOW....................*/
 .backdrop {
     position: fixed;
     top: 0;
@@ -582,7 +763,7 @@ img {
     fill: var(--white-color);
 }
 
-/*..........Modal form..........*/
+/*.......................MODAL FORM...................*/
 
 .modal-form {
     display: flex;
@@ -734,9 +915,6 @@ img {
 .modal-form-btn:focus {
     background-color: var(--color-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        
-
-
 }
 
 
@@ -748,14 +926,44 @@ img {
 
 
 
-/* portfolio.html */
 
 
-/* header */
 
-.nav-list {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*....................PORTFOLIO ........................... */
+
+
+
+
+/* .nav-list {
     border-bottom: 1px solid var(--secondary-color-text);
-}
+} */
 
 
 
