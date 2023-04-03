@@ -96,6 +96,9 @@ span {
     .text {
         margin: 0;
     }
+    .section {
+        padding: 96px 0;
+    }
     
 }
 
@@ -587,7 +590,6 @@ screen and (min-resolution: 2dppx) {
 
 /********************************........Stages of development.......*****************************/
 
-
 /*.................MOBIL VERSION..........................*/
 
 @media screen and (max-width: 767px ) {
@@ -611,20 +613,18 @@ screen and (min-resolution: 2dppx) {
 }
 }
 
-
 /*.................TABLET VERSION..........................*/
 
 @media screen and (min-width:768px) {
     .section-text {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
 }
-.title {
-    padding: 96px 0;
-}
+
 .section-title {
     margin-bottom: 8px;
-    width: 264px;
     color: var(--brand-color);
     font-size: 36px;
     line-height: 1.11;
@@ -632,22 +632,12 @@ screen and (min-resolution: 2dppx) {
 .text {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 72px;
-    
-}
-
-.stage:nth-child(2n) {
-    margin-right: 0;
+    line-height: 1.5;   
 }
 .stage {
     width: calc((100% - 24px)/2);
-    margin-right: 24px;
-
-
 }
 }
-
 /*.................DESKTOP VERSION..........................*/
 
 @media screen and (min-width:1200px) {
@@ -687,27 +677,61 @@ screen and (min-resolution: 2dppx) {
     margin: 0;
     color: var(--main-color-text);
     font-weight: 400;
-    line-height: 1.5;
-    
-    
+    line-height: 1.5;    
 }
-.section {
-    padding: 96px 0;
+
 }
-}
+
+
+
+
 
 
 
 /********************************......What are we doing......*****************************/
 
-
 /*.................DESKTOP VERSION..........................*/
 
 @media screen and (min-width:1200px) {
+.subtitle {
+    text-transform: capitalize;
+    margin-bottom: 72px;
+    
+    color: var(--brand-color);
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    }
+.subtitle__list .pic {
+    width: calc((100% - 48px)/ 3);
+    }
+.subtitle__list .pic + .pic {
+    margin-left: 24px;
+    }
+.subtitle__list {
+    display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+/********************************........Our Team.......*****************************/
+
+/*.................MOBIL VERSION..........................*/
+
+@media screen and (max-width: 767px ) {
+    .title-desc {
+        background-color: var(--secondary-background-color);
+    }
     .subtitle {
         text-transform: capitalize;
         margin-bottom: 72px;
-    
         color: var(--brand-color);
         font-size: 36px;
         line-height: 1.1;
@@ -715,16 +739,151 @@ screen and (min-resolution: 2dppx) {
     }
     .section-subtitle {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
     }
-    .section-subtitle .pic {
-        width: calc((100% - 48px)/ 3);
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
-    .section-subtitle .pic + .pic {
-        margin-left: 24px;
+    .list-text {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
+        padding: 32px 0;
+    
+        background-color: var(--white-color);
     }
-
+    .section-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .desc {
+        text-align: center;
+        margin: 0;
+    
+        color: var(--main-color-text);
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .desc-text {
+        margin-bottom: 8px;
+    }
+    .social-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        cursor: pointer;
+    }
+    .social-list-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .social-list-link:hover, 
+    .social-list-link:focus {
+        background-color: var(--color-hover);
+    }
 
 }
+
+/*.................TABLET VERSION..........................*/
+
+@media screen and (min-width:768px) {
+.title-desc {
+    background-color: var(--secondary-background-color);
+    }
+.subtitle {
+    text-transform: capitalize;
+    margin-bottom: 72px;
+    color: var(--brand-color);
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    }
+.section-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+    justify-content: center;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .list-text {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
+        padding: 32px 0;
+    
+        background-color: var(--white-color);
+    }
+    .section-list {
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .desc {
+        text-align: center;
+        margin: 0;
+    
+        color: var(--main-color-text);
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .desc-text {
+        margin-bottom: 8px;
+    }
+    .social-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        cursor: pointer;
+    }
+    .social-list-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .social-list-link:hover, 
+    .social-list-link:focus {
+        background-color: var(--color-hover);
+    }
+
+}
+
+/*.................DESKTOP VERSION..........................*/
+
+@media screen and (min-width:1200px) {
+.section {
+    padding: 120px 0;
+}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -732,12 +891,6 @@ screen and (min-resolution: 2dppx) {
 
 /* .section-title { */
     /* 
-
-
-
-
-
-
 
 
 .section-subtitle .item {
@@ -847,6 +1000,18 @@ img {
     fill: var(--border-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
