@@ -12,7 +12,7 @@
   <body>
     
     <header class="icon nav-list">
-      <div class="container main-nav">
+      <div class="container main-nav page-nav">
       <a href="./index.html" class="icon-link"><span>WEB</span>STUDIO</a>
       <nav class="items">
         <ul class="site-nav list menu">
@@ -33,6 +33,7 @@
         </svg>
       </button>
       <address class="items-nav menu">
+        <div class="auth-nav__list">
         <ul class="auth-nav list">
           <li class="item">
             <a href="email:info@devstudio.com" class="menu-link link">info@devstudio.com</a>
@@ -41,10 +42,11 @@
             <a href="tel:+11(000)1111111" class="menu-link link">+11 (000) 111-11-11</a>
           </li>
         </ul>
+        </div>
       </address>
       </div> 
 
-
+      <!--------------------------Mobil menu----------------------------------------------->
       <div class="mobile-menu js-menu-container"  >
         <div class="container mobile-menu__container" >
 
@@ -65,9 +67,6 @@
             <a href="" class="mobile-menu__link">Contacts</a>
           </li>
         </ul>
-
-
-
 
         <div class="mobile-menu__address">
         <ul class="mobile-menu-list">
@@ -110,13 +109,14 @@
           </li>
         </ul>
       </div>
-        </div>
       </div>
+      </div>
+      <!------------------------------Mobile menu---------------------------------->
     </header>
 
+    <!----------------------------------------MAIN-------------------------------------------->
 
-    <!-- <main>
-      <section class="hero words">
+      <section class="hero banner">
         <div class="section-hero">
         <div class="container">
         <h1 class="hero-title">
@@ -126,7 +126,8 @@
         </div>
         </div>
       </section>
-    
+     
+      <!-----------------------Stages of development------------------------------------------>
 
       <section class="section title">
         <div class="container">
@@ -187,14 +188,19 @@
         </div>
       </section>
 
+    <!-----------------------------What are we doing------------------------------------>
+
       <section class="section-caption">
         <div class="container ">
         <h2 class="subtitle">What are we doing</h2>
         <ul class="section-subtitle">
           <li class="pic">
-            <img src="./images/forocard1.jpg" 
+            <img 
+            srcset="./images/computer-desktop.jpg 1x, ./images/computer-desktop@2.jpg 2x"
+            src="./images/forocard1.jpg" 
             alt="To study" 
-            width="360" />
+            width="360" 
+            />
           </li>
 
           <li class="pic">
@@ -216,7 +222,7 @@
         </div>
       </section>
 
-      <section class="section title-desc">
+      <!-- <section class="section title-desc">
 
         <div class="container">
         <h2 class="subtitle">Our Team</h2>
@@ -395,9 +401,9 @@
 
         </ul>
         </div>
-      </section>
+      </section> -->
 
-      <section class="section list-customers">
+      <!-- <section class="section list-customers">
         <div class="container ">
           <h2 class="subtitle">Customers</h2>
           <ul class="customers-item">
@@ -446,13 +452,14 @@
           </ul>
 
         </div>
-      </section>
+      </section> -->
+
     </main>
 
 
 
 
-    <footer class="footer-content">
+    <!-- <footer class="footer-content">
       <div class="container content-text">
       <div class="quote-link">
       <a href="./index.html" class="icon-link"><span>WEB</span>STUDIO</a>
@@ -498,11 +505,11 @@
         </a>
         </li>
       </ul>
-      </div>
+      </div> -->
 
 
 
-      <div class="subscribe-content">
+      <!-- <div class="subscribe-content">
         <p class="subscribe-title subscribe">Subscribe</p>
       
         <form class="subscribe-form">
@@ -513,8 +520,8 @@
           placeholder="E-mail"
           aria-label="email"
           required
-          />
-
+          /> -->
+<!-- 
         <button type="submit" class="subscribe-btn">
           Subscribe<svg class="subscribe-btn-icon" width="24px" height="20px">
           <use href="./images/icons.svg#icon-subcribe"></use>
@@ -525,7 +532,7 @@
       </div>
       </div>
       
-    </footer>
+    </footer> -->
 
 
 
@@ -609,7 +616,9 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+
+
+    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
