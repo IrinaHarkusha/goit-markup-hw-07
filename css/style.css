@@ -1561,6 +1561,11 @@ screen and (min-resolution: 2dppx) {
     position: relative;
     overflow: hidden;
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 }
 @media screen and (max-width:1199px) and (min-width: 769px) {
     .gallery {
