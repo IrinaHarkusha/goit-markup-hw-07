@@ -424,7 +424,7 @@ screen and (min-resolution: 2dppx) {
 }
 .section-hero {
     width: 100%;
-    padding: 112px 54px;
+    padding: 112px 0px;
 }
 .hero-title {
     margin-bottom: 72px;
@@ -618,7 +618,6 @@ screen and (min-resolution: 2dppx) {
 @media screen and (min-width:1200px) {
 .section-title { 
     margin-bottom: 8px;
-    color: var(--brand-color);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -649,10 +648,8 @@ screen and (min-resolution: 2dppx) {
     padding-bottom: 120px;
 }
 .text {
-    margin: 0;
     color: var(--main-color-text);
-    font-weight: 400;
-    line-height: 1.5;    
+    font-weight: 400;   
 }
 
 }
@@ -719,9 +716,7 @@ screen and (min-resolution: 2dppx) {
         background-color: var(--white-color);
     }
     .section-title {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
+        font-weight: 700;
     }
     .desc {
         text-align: center;
@@ -1382,7 +1377,9 @@ screen and (min-resolution: 2dppx) {
     background-color: var(--color-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
+input {
+    appearance: none;
+}
 
 
 
@@ -1567,7 +1564,7 @@ img {
     height: auto;
 }
 }
-@media screen and (max-width:1199px) and (min-width: 769px) {
+@media screen and (max-width:1199px) and (min-width: 768px) {
     .gallery {
         column-gap: 16px;
         row-gap: 72px;
